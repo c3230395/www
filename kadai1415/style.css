@@ -95,7 +95,7 @@ footer {
     margin-right: 20px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 900px) {
     .header-container {
         text-align: center;
         flex-direction: column;
