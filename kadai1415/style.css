@@ -1,13 +1,12 @@
 body {
     width: 90%;
     max-width: 980px;
-    margin: 0 auto; /* 中央揃え */
+    margin: 0 auto;
 }
 
 header {
     background-color: rgb(111, 169, 113);
     color: white;
-    overflow: hidden;
     padding: 0;
     margin: 0;
 }
@@ -15,45 +14,22 @@ header {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 20px;
-    flex-wrap: nowrap; /* 折り返し防止 */
 }
 
 #logo {
     margin-right: 20px;
-    width: 10%; /* 必要に応じて調整 */
-    max-width: 80px;
-    height: auto;
-    flex-shrink: 1;
+    width: 50px;
 }
 
-#head_meg {
-    flex-grow: 1;
-    min-width: 0; /* 縮小を許可 */
-}
-
-#head_meg h1 {
-    font-size: 2rem; /* 初期フォントサイズ */
-}
-
-#siryo-button {
-    width: 10%; /* 必要に応じて調整 */
-    max-width: 80px;
-    background: none;
-    margin-top: 0;
-    margin-right: 0;
-    padding: 0;
-    flex-shrink: 1;
-}
-
-#siryo {
+#header-image-container {
     width: 100%;
+    overflow: hidden;
 }
 
 #headimg {
     width: 100%;
-    margin: 0;
-    padding: 0;
     display: block;
 }
 
@@ -70,62 +46,42 @@ main h2 {
 }
 
 .section {
+    flex: 1;
     padding: 10px;
     background-color: white;
     border: 4px solid;
     border-radius: 10px;
     text-align: center;
-    flex: 1;
-    position: relative; /* 絶対位置の基準 */
-}
-
-.section img {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
 }
 
 #keiei {
-    font-weight: bold;
     border-color: rgb(243, 216, 188);
     background: rgb(252, 239, 239) url(images/ビジネスマン.png) no-repeat center;
 }
-#keiei h3 {
-    background-color: rgb(243, 216, 188);
-}
 
 #kaikei {
-    font-weight: bold;
     border-color: rgb(243, 188, 188);
     background: rgb(252, 239, 239) url(images/計算機.png) no-repeat center;
 }
-#kaikei h3 {
-    background-color: rgb(243, 188, 188);
-}
 
 #jouho {
-    font-weight: bold;
     border-color: rgb(212, 167, 243);
     background: rgb(252, 239, 239) url(images/パソコン.png) no-repeat center;
-}
-#jouho h3 {
-    background-color: rgb(212, 167, 243);
 }
 
 .button-container {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
-button {
+.button {
     background-color: rgb(252, 176, 69);
     border: 0;
     border-radius: 5px;
     width: 80%;
     height: 80px;
     font-size: x-large;
-    display: inline-block;
 }
 
 .button:hover {
@@ -136,13 +92,7 @@ footer {
     background-color: rgb(111, 169, 113);
     color: white;
     text-align: center;
-    margin-top: 20px;
-}
-
-footer h2 {
-    background-color: rgb(27, 109, 17);
-    margin: 0;
-    width: 100%;
+    padding: 20px 0;
 }
 
 #copy {
@@ -151,40 +101,21 @@ footer h2 {
 }
 
 @media (max-width: 768px) {
+    .header-container{
+        text-align: center;
+    }
+    h1{
+        font-size: 20px;
+    }
     .header-container {
-        flex-direction: row; /* 一列で保持 */
-        justify-content: space-between;
-    }
-
-    #logo, #siryo-button {
-        width: auto;
-        max-width: 50px; /* 小さい画面用に小さく */
-    }
-
-    #siryo-button {
-        margin-top: 0;
-        margin-right: 0;
-    }
-
-    #head_meg h1 {
-        font-size: 1.5rem; /* 小さい画面用に調整 */
+        flex-direction: column;
     }
 
     .gakubu {
         flex-direction: column;
     }
 
-    button {
+    .button {
         width: 100%;
-    }
-
-    .button-container {
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    #head_meg h1 {
-        font-size: 1.2rem; /* さらに小さい画面用に調整 */
     }
 }
