@@ -101,7 +101,8 @@ footer {
         flex-direction: column;
     }
     h1 {
-        font-size: 15px;
+        font-size: 10px;
+        color:red;
     }
     .gakubu {
         flex-direction: column;
