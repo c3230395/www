@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptのサンプル</title>
+    <style>
+        body{
+            padding:0 20px;
+        }
+        h1{
+            margin: 20px 0 0;
+        }
+        #pic{
+            border: solid 5px #333333;
+            margin-bottom: 15px;
+        }
+        button{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>美しい風景</h1>
+    <img src="images/pic01.jpg" id="pic"><br>
+    <button onclick="document.getElementById('pic').setAttribute('src','images/pic01.jpg');">写真1</button>
+    <!--setAttribute 属性を指定したり属性の値を更新したりできる（Attribute、アトリビュート、属性）-->
+    <button onclick="document.getElementById('pic').setAttribute('src','images/pic02.jpg');">写真2</button>
+    <button onclick="document.getElementById('pic').setAttribute('src','images/pic03.jpg')">写真3</button>
+    <button onclick="document.getElementById('pic').setAttribute('src','images/pic04.jpg')">写真4</button>
+</html>

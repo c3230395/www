@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体育館の利用料金</title>
+    <style>
+        body{
+            padding: 0 15px;
+            /*全て・上下、左右・上、左右、下・上、右、下、左*/
+        }
+        h1{
+            border-bottom: solid 2px #000000;
+            line-height: 1.2;
+        }
+        p{
+            font-size: 20px;
+        }
+        #total{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+<h1>体育館の利用料金</h1>
+<p>基本料金(2時間　2000円)</p>
+<form onchange="checkSum();">
+<!--form 入力フォームを作る-->
+<!--onchange 内容が変更されたときに実行される-->
+    <label><input type="checkbox" id="c1">夜間照明(1000円)</label><br>
+    <!--input フォームの入力要素をtypeで決める-->
+    <!--label フォームの入力要素に対し説明をいれる-->
+    <label><input type="checkbox" id="c2">ネット (300円)</label><br>
+    <label><input type="checkbox" id="c3">ボール×10個(400円)</label>
+</form>
+<p>合計金額　<span id="total">2000円</span></p>
+<!--span 特定部分にcssを指定するなどに使用、divと違ってインライン要素-->
+
+<script>
+    function checkSum(){
+        let price = 2000;
+        if(document.getElementById('c1').checked == true){
+            //document.getElementById 指定したidの箇所から要素をゲットする
+            //checked チェックボックスの状態
+            price = price + 1000;
+        }
+        if(document.getElementById('c2').checked == true){
+            price = price + 300;
+        }
+        if(document.getElementById('c3').checked == true){
+            price = price + 400;
+        }
+        document.getElementById('total').textContent = price + '円';
+        //textContent 文字を置き換える
+    }
+</script>
+
+
+</body>
+</html>
