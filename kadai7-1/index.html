@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複数の要素の取得</title>
+</head>
+<body>
+    <h1>人口の多い国ランキング</h1>
+    <ol>
+        <li id="chn">中国</li>
+        <li id="ind">インド</li>
+        <li id="usa">アメリカ</li>
+        <li id="idn">インドネシア</li>
+    </ol>
+    <button onclick="change();">国旗で表示</button>
+
+    <script>
+        function change(){
+            document.getElementById('chn').innerHTML = '<img src="img/flag_CHN.png">';
+            document.getElementById('ind').innerHTML = '<img src="img/flag_IND.png">';
+            document.getElementById('usa').innerHTML = '<img src="img/flag_USA.png">';
+            document.getElementById('idn').innerHTML = '<img src="img/flag_IDN.png">';
+        }
+    </script>
+</body>
+</html>

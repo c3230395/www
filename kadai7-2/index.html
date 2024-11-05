@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の追加と削除</title>
+</head>
+<body>
+    <h1>写真の一覧</h1>
+    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+    <div id="pic">
+    <button onclick="pic();">写真を表示</button>
+    </div>
+
+    <script>
+        function pic(){
+            document.getElementById('pic').innerHTML =
+            '<img src="img/photo_1.jpg"> <img src="img/photo_2.jpg"> <img src="img/photo_3.jpg"> <img src="img/photo_4.jpg"> <img src="img/photo_5.jpg"> <img src="img/photo_6.jpg"> <img src="img/photo_7.jpg"> <img src="img/photo_8.jpg">';
+        }
+    </script>
+</body>
+</html>
