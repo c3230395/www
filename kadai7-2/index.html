@@ -13,7 +13,6 @@
 
     <script>
         function pic(){
-            document.getElementById('btn').style.display = 'none';
             document.getElementById('pic').innerHTML = `
                 <img src="img/photo_1.jpg">
                 <img src="img/photo_2.jpg">
@@ -24,7 +23,9 @@
                 <img src="img/photo_7.jpg">
                 <img src="img/photo_8.jpg">
             `;
+            document.getElementById('btn').remove();
         }
     </script>
 </body>
 </html>
+
