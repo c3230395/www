@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>条件分岐</title>
+    <style>
+        .big_font{
+            font-size: 32px;
+            margin: 25px;
+        }
+    </style>
 </head>
 <body>
     <h3>問題</h3>
-    <p>最も面積が大きい「県」は何県でしょう？</p>
-    <button id="btn" onclick="show();">ヒントを見る</button>
-    <p id="hint">(注意) 北海道は「県」ではありません。</p>
+    <p>次の方程式を満たす解を求めなさい。</p>
+    <p class="big_font">x+6=9</p>
+    <button onclick="check(1);">x = 1</button>
+    <button onclick="check(2);">x = 2</button>
+    <button onclick="check(3);">x = 3</button>
+    <button onclick="check(4);">x = 4</button>
+    <button onclick="check(5);">x = 5</button>
+    <div id="message" class="big_font"></div>
+
     <script>
-        let clickTimes = 0;
-        function show(){
-            clickTimes++;
-            switch(clickTimes){
-                case 1:
-                    document.getElementById('hint').textContent = '東北地方にあります。';
-                    document.getElementById('btn').textContent = '答えを見る';
+        function check(x){
+            switch (x) {
+                case 3:
+                    document.getElementById('message').textContent = '正解！';
                     break;
                 default:
-                    document.getElementById('hint').textContent = '答えは「岩手県」です。';
+                    document.getElementById('message').textContent = '間違い！';
                     break;
             }
         }
