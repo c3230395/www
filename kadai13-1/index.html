@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>数値の入力とエラー処理</title>
+    <style>
+        #message {
+            width: 500px;
+            padding: 15px;
+            margin: 25px 0px;
+            background-color: #FFCC99;
+        }
+    </style>
+</head>
+<body>
+    <h1>ｎ～ｍで割り切れる数字</h1>
+    <p>
+    １～１０の好きな範囲で<br>
+    割り切れる最小の数値をJavaScriptで求めます。
+    </p>
+    <button onclick="show()">範囲を指定</button>
+    <div id="message">ここに結果が表示されます。</div>
+
+    <script>
+        function show() {
+            let text = '';
+            let min = parseInt(prompt('範囲の最小値を1~10で入力してください'));
+            let max = parseInt(prompt('範囲の最大値を1~10で入力してください'));
+
+            if (min <= 0 || max >= 11 || min > max) {
+                alert('半角の整数で範囲を正しく指定してください。');
+                return;
+            }
+            //最小公倍数
+            let lcm = min;
+            for (let i = min + 1; i <= max; i++) {
+                lcm = (lcm * i) / gcd(lcm, i);
+            }
+
+            text = min + '～' + max + 'で割り切れる最小の数値は ' + lcm + ' です。';
+            document.getElementById('message').textContent = text;
+        }
+        
+        //最大公約数
+        function gcd(a, b) {
+            if (b == 0) return a;
+            return gcd(b, a % b);
+        }
+    </script>
+</body>
+</html>
+
