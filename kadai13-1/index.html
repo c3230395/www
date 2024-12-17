@@ -27,7 +27,7 @@
             let min = parseInt(prompt('範囲の最小値を1~10で入力してください'));
             let max = parseInt(prompt('範囲の最大値を1~10で入力してください'));
 
-            if (min <= 0 || max >= 11 || min > max) {
+            if (min <= 0 || max >= 11 || min > max ||isNaN(min) || isNaN(max)) {
                 alert('半角の整数で範囲を正しく指定してください。');
                 return;
             }
