@@ -8,6 +8,7 @@
     <style>
         body {
             background-color: #f8f8f8;
+            animation: fadein 3s forwards;
         }
         .navbar {
             border-bottom: 1px solid #ddd;
@@ -36,6 +37,10 @@
         }
         .small-box {
             height: 80px;
+        }
+        @keyframes fadein {
+          0% {opacity: 0}
+          100% {opacity: 1}
         }
     </style>
 </head>
