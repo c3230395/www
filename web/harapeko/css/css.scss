@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+// @mixin m-flex($a: center, $j: space-between) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: $j;
+//     align-items: $a;
+// }
+
+// body {
+//     color: #fff;
+//     background-color: #333338;
+// }
+
+// img {
+//     max-width: 100%;
+//     height: auto;
+//     vertical-align: bottom;
+// }
+
+// @mixin m-inner($w: 90%, $mw: 1200px) {
+//     width: min($w, $mw);
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+// ////////////////
+// /// ///////////
+// /// header
+
+// .header {
+//     text-align: center;
+//     margin-top: 30px;
+//     margin-bottom: -50px;
+//     padding-bottom: 20px;
+//     border-bottom: 1px solid #969696;
+
+//     &__inner {
+//         @include m-inner(60%, 410px);
+//     }
+
+//     &__alllist {
+//         @include m-flex();
+//     }
+// }
+
+// .tab_wrap {
+//     width: 90%;
+//     margin: 80px auto;
+// }
+
+// input[type="radio"] {
+//     display: none;
+// }
+
+// .tab_area {
+//     padding: 1% 1%;
+//     border-radius: 26px;
+//     background: #7b7b7b;
+//     font-size: 0;
+//     margin: 0 10px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 309px;
+// }
+
+// .tab_area label {
+//     border-radius: 30px;
+//     width: 150px;
+//     display: inline-block;
+//     padding: 12px 0;
+//     color: #999;
+//     text-align: center;
+//     font-size: 13px;
+//     cursor: pointer;
+//     transition: ease 0.2s opacity;
+// }
+
+// .tab_panel {
+//     padding: 80px 0;
+//     display: none;
+// }
+
+// .tab_panel p {
+//     font-size: 14px;
+//     letter-spacing: 1px;
+// }
+
+// #tab1:checked~.tab_area .tab1_label {
+//     background: #2BACE3;
+//     color: #ffffff;
+// }
+
+// #tab1:checked~.panel_area #panel1 {
+//     display: block;
+// }
+
+// #tab2:checked~.tab_area .tab2_label {
+//     background: #2BACE3;
+//     color: #ffffff;
+// }
+
+// #tab2:checked~.panel_area #panel2 {
+//     display: block;
+// }
+
+// #tab3:checked~.tab_area .tab3_label {
+//     background: #fff;
+//     color: #000;
+// }
+
+// #tab3:checked~.panel_area #panel3 {
+//     display: block;
+// }
+
+// .month {
+
+//     &__title {
+//         font-size: 36px;
+//     }
+
+//     margin-top: 50px;
+
+//     &__allfirst {
+//         text-align: center;
+//         @include m-flex(center, left);
+//     }
+
+//     &__first {
+//         margin-right: 1.3%;
+//         width: 32%;
+//         text-align: left;
+//         display: table;
+//         margin-bottom: 20px;
+
+//         &__image {
+//             object-fit: contain;
+//         }
+
+//         &__text {
+//             display: table-caption;
+//             caption-side: bottom;
+//             font-size: 14px;
+//             text-align: left;
+
+//             .title {
+//                 font-size: 14px;
+//             }
+
+//             .artist {
+//                 font-size: 10px;
+//             }
+//         }
+//     }
+// }
+
+// .allmonth:nth-child(1) {
+//     margin-top: -100px;
+// }
+
+// ///////////////////
+// //year
+
+// .allyear {
+//     margin-top: -30px;
+// }
+
+// .year {
+//     margin-bottom: 10px;
+
+//     &__text {
+//         text-align: center;
+//         background-color: #999;
+//         padding: 70px 100px;
+//         border-radius: 20px;
+//     }
+// }
+
+/////////////////
+/// ///////////
+/// search
+
+.allsearch {
+    color: #fff;
+    background-color: #333338;
+    animation: fadein 3s forwards;
+
+}
+
+input#query {
+    width: 290px;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.search__top {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 90%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .arrow {
+        width: 15px;
+    }
+
+    .voice {
+        width: 40px;
+        background-color: #a9a9a9;
+        border-radius: 30px;
+        padding: 10px 10px;
+    }
+}
+
+.history {
+    margin-top: 30px;
+
+    &__inner {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__h2 {
+        font-size: 26px;
+    }
+
+    &__alllist {
+        padding-left: 0;
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+        list-style: none;
+    }
+
+    dt {
+        margin-right: 10px;
+    }
+
+    dd {
+        margin-top: 20px;
+        line-height: .7;
+    }
+
+    &__title {
+        font-size: 17px;
+    }
+
+    &__text {
+        font-size: 13px;
+    }
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}

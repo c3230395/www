@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ホーム - 音楽アプリ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            border-bottom: 2px solid #2bace3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand fixed-top" style="background-color: black;"style="background-color: #5195c5;">
+        <div class="container-fluid">
+            <ul class="navbar-nav d-flex flex-row" >
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color: aliceblue;" >ホーム</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white;">ライブラリ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="kirok.html" style="color: white;">記録</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="record.html" style="color: white;">検索</a>
+                </li>
+            </ul>
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </nav>
+</header>
+<div class="tab_wrap">
+    <input id="tab1" type="radio" name="tab_btn" checked>
+    <input id="tab2" type="radio" name="tab_btn">
+    <input id="tab3" type="radio" name="tab_btn">
+    <div class="tab_area">
+        <label class="tab1_label" for="tab1">月別</label>
+        <label class="tab2_label" for="tab2">年別</label>
+    </div>
+    <div class="panel_area">
+        <div id="panel1" class="tab_panel">
+            <div class="allmonth">
+                <div class="month">
+                    <h2 class="month__title">1月</h2>
+                    <div class="month__allfirst">
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group5.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">曲名</p>
+                                <p class="artist">アーティスト名</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group2.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">ダイヤの囁き</p>
+                                <p class="artist">ミスティ</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group3.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">セッション</p>
+                                <p class="artist">サファイア</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group4.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">ルーノート</p>
+                                <p class="artist">レトロ</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">雷鳴
+                                </p>
+                                <p class="artist">ストーム</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="month">
+                    <h2 class="month__title">2月</h2>
+                    <div class="month__allfirst">
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group6.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">キラキラミラクル</p>
+                                <p class="artist">アスカ</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group7.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">エンドレスフレイム</p>
+                                <p class="artist">ヤナイ</p>
+                            </div>
+                        </div>
+                        <div class="month__first">
+                            <img class="month__first__image" src="image/Mask group8.png" alt="">
+                            <div class="month__first__text">
+                                <p class="title">ダンスの影</p>
+                                <p class="artist">ツリウラ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="panel2" class="tab_panel">
+            <div class="allyear">
+                <div class="year">
+                    <img class="year-image" src="image/Rectangle 81.png" alt="">
+                </div>
+                <div class="year">
+                    <img class="year-image" src="image/Rectangle 82.png" alt="">
+                </div>
+                <div class="year">
+                    <img class="year-image" src="image/Rectangle 83.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
